@@ -1,0 +1,36 @@
+package Iter;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+import java.util.ListIterator;
+
+public class Studentgroup2  implements Iterable<Student> {
+    private List<Student> students;
+
+    public Studentgroup2(List<Student> students) {
+        this.students = students;
+
+    }
+
+    public int Size() {
+        return students.size();
+    }
+
+    public Student get(int index) {
+        return students.get(index);
+
+    }
+
+    
+   
+
+    
+    public Iterator<Student> iterator() {
+       return new GroupListIterator(this);
+
+    }
+
+    
+
+}
