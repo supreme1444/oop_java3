@@ -1,0 +1,27 @@
+package Iter;
+
+import java.util.Iterator;
+
+
+public class StudentGroupIterator implements Iterator {
+    private int index = -1;
+    private Studentgroup1 studentgroup;
+
+    public StudentGroupIterator(Studentgroup1 studentgroup) {
+        this.studentgroup = studentgroup;
+    }
+
+    @Override
+    public boolean hasNext() {
+       return index<studentgroup.getSize()-1;
+       
+       
+    }
+
+    @Override
+    public Object next() {
+
+        return studentgroup.get(++index);
+    }
+
+}
